@@ -2,9 +2,9 @@ local utils = require('utils')
 utils.opt('o', 'termguicolors', true)
 
 require('github-theme').setup({
-    themeStyle   = "dimmed",
-    commentStyle = "italic",
-    keywordStyle = "bold",
-    darkFloat    = true,
+    theme_style   = "dimmed",
+    comment_style = "italic",
+    keyword_style = "bold",
+    dark_float    = true,
     --transparent  = true,
 })
