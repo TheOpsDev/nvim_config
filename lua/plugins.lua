@@ -27,4 +27,10 @@ return require('packer').startup(function()
   -- Fugitive for Git
   use { 'tpope/vim-fugitive' }
 
+  -- File Explorer 
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons'
+  }
+
 end)

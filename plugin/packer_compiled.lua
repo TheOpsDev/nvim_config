@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/christianherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/christianherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/christianherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/christianherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/christianherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/chrisherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/chrisherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/chrisherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/chrisherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/chrisherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -71,44 +71,44 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["completion-nvim"] = {
     loaded = true,
-    path = "/Users/christianherrera/.local/share/nvim/site/pack/packer/start/completion-nvim"
+    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/completion-nvim"
   },
   ["github-nvim-theme"] = {
     loaded = true,
-    path = "/Users/christianherrera/.local/share/nvim/site/pack/packer/start/github-nvim-theme"
+    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/github-nvim-theme"
   },
   ["nlua.nvim"] = {
     loaded = true,
-    path = "/Users/christianherrera/.local/share/nvim/site/pack/packer/start/nlua.nvim"
+    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/nlua.nvim"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/christianherrera/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/Users/christianherrera/.local/share/nvim/site/pack/packer/opt/packer.nvim"
+    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/opt/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/christianherrera/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/christianherrera/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/christianherrera/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["vim-dispatch"] = {
     loaded = true,
-    path = "/Users/christianherrera/.local/share/nvim/site/pack/packer/start/vim-dispatch"
+    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/vim-dispatch"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/Users/christianherrera/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   }
 }
 
