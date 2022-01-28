@@ -32,7 +32,10 @@ return require('packer').startup(function()
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons'
   }
-
+  
+  -- Golang NVIM support
+  use { 'ray-x/go.nvim' }
+  
   -- Status Bar
   use {
     'hoob3rt/lualine.nvim',

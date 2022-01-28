@@ -27,3 +27,8 @@ require('lsp_lua')
 -- Another option is to groups configuration in one folder
 require('config')
 
+-- ray-x/Go plugin support
+require('go').setup()
+
+-- Run gofmt on save
+vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').gofmt() ]], false)
