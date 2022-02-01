@@ -6,5 +6,4 @@ require('github-theme').setup({
     comment_style = "italic",
     keyword_style = "bold",
     dark_float    = true,
-    --transparent  = true,
 })

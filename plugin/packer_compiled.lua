@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/chrisherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/chrisherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/chrisherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/chrisherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/chrisherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/cherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/cherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/cherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/cherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/cherrera/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -57,7 +57,7 @@ end
 time([[Luarocks path setup]], false)
 time([[try_loadstring definition]], true)
 local function try_loadstring(s, component, name)
-  local success, result = pcall(loadstring(s))
+  local success, result = pcall(loadstring(s), name, _G.packer_plugins[name])
   if not success then
     vim.schedule(function()
       vim.api.nvim_notify('packer.nvim: Error running ' .. component .. ' for ' .. name .. ': ' .. result, vim.log.levels.ERROR, {})
@@ -69,58 +69,60 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["completion-nvim"] = {
-    loaded = true,
-    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/completion-nvim"
-  },
   ["github-nvim-theme"] = {
     loaded = true,
-    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/github-nvim-theme"
+    path = "/Users/cherrera/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
   },
-  ["nlua.nvim"] = {
+  ["go.nvim"] = {
     loaded = true,
-    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/nlua.nvim"
+    path = "/Users/cherrera/.local/share/nvim/site/pack/packer/start/go.nvim",
+    url = "https://github.com/ray-x/go.nvim"
   },
-  ["nvim-lspconfig"] = {
+  ["lualine.nvim"] = {
     loaded = true,
-    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/cherrera/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/hoob3rt/lualine.nvim"
   },
   ["nvim-tree.lua"] = {
+    config = { "\27LJ\2\n0\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\21config.nvim-tree\frequire\0" },
     loaded = true,
-    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    path = "/Users/cherrera/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/Users/cherrera/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/opt/packer.nvim"
+    path = "/Users/cherrera/.local/share/nvim/site/pack/packer/opt/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/cherrera/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/Users/cherrera/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/telescope.nvim"
-  },
-  ["vim-dispatch"] = {
-    loaded = true,
-    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/vim-dispatch"
-  },
-  ["vim-fugitive"] = {
-    loaded = true,
-    path = "/Users/chrisherrera/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+    path = "/Users/cherrera/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\n0\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\21config.nvim-tree\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
 if should_profile then save_profiles() end
 
 end)
