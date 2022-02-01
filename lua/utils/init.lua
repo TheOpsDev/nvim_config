@@ -1,3 +1,4 @@
+-- utility functions for accessing vim scopes and keymaps functions
 local utils = { }
 
 local scopes = {o = vim.o, b = vim.bo, w = vim.wo}

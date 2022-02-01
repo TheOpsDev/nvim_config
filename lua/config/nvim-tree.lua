@@ -1,12 +1,30 @@
-local utils = require('utils')
-
--- Key Mappings
-utils.map('n', '<Leader>T', '<cmd>NvimTreeToggle<CR>')  -- File Tree Viewer
-
--- Configuration
-vim.cmd([[ let g:nvim_tree_side          = 'right' ]])
-vim.cmd([[ let g:nvim_tree_width         = 60 ]])
-vim.cmd([[ let g:nvim_tree_auto_open     = 1 ]])
-vim.cmd([[ let g:nvim_tree_auto_close    = 1 ]])
-vim.cmd([[ let g:nvim_tree_hide_dotfiles = 1 ]])
-vim.cmd([[ let g:nvim_tree_highlight_opened_files = 1 ]])
+require'nvim-tree'.setup {
+    disable_netrw = true,
+    hijack_netrw  = true,
+    open_on_setup = true,
+    auto_close    = true,
+    update_to_buf_dir = {
+        enable    = true,
+        auto_open = true,
+    },
+    view = {
+        width = '20%',
+        side  = 'right',
+        auto_resize = true,
+    },
+    update_focused_file = {
+        enable = true,
+    },
+    diagnostics = {
+        enable = true,
+        show_on_dirs = true,
+    },
+    git = {
+        enable  = true,
+        ignore  = true,
+        timeout = 400 -- In Milliseconds
+    },
+    filters = {
+        dotfiles = true -- Hide dotfiles
+    }
+}

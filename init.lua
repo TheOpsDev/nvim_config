@@ -1,11 +1,9 @@
 -- Map leader key to spacebar
 vim.g.mapleader = ' '
 
+-- map vim functions to local vars
 local fn = vim.fn
 local execute = vim.api.nvim_command
-
--- Sensible defaults
-require('settings')
 
 -- Auto install packer.nvim if not exists
 local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
@@ -21,14 +19,8 @@ require('plugins')
 -- Key mappings
 require('keymappings')
 
--- Setup Lua language server using submodule
-require('lsp_lua')
+-- Global Default Settings
+require('settings')
 
--- Another option is to groups configuration in one folder
+-- Import Specific Configurations
 require('config')
-
--- ray-x/Go plugin support
-require('go').setup()
-
--- Run gofmt on save
-vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').gofmt() ]], false)
