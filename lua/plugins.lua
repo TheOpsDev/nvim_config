@@ -37,6 +37,11 @@ return require('packer').startup({function()
         }
     }
 
+    -- Terraform support
+    use {
+        'hashivim/vim-terraform'
+    }
+
     -- -- Vim dispatch
     -- use { 'tpope/vim-dispatch' }
 
