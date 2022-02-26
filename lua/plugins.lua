@@ -41,12 +41,12 @@ return require('packer').startup({function()
     use {
         'hashivim/vim-terraform'
     }
-
-    -- -- Vim dispatch
-    -- use { 'tpope/vim-dispatch' }
-
-    -- -- Fugitive for Git
-    -- use { 'tpope/vim-fugitive' }
+    
+    use {
+        'windwp/nvim-autopairs',
+        module = { 'nvim-autopairs.completion.cmp', 'nvim-autopairs' },
+        config = function() require('config.autopairs') end
+    }
 
     end, -- END OF PLUGIN DEFINTIONS
     -- Sets Packer to floating window instead of added pane
