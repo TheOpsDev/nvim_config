@@ -3,7 +3,19 @@ return require('packer').startup({function()
     
     -- Packer can manage itself as an optional plugin
     use {'wbthomason/packer.nvim', opt = true}
+    
+    -- LSP support
+    use { 'neovim/nvim-lspconfig' }
 
+    use { 
+        'ray-x/navigator.lua', 
+        requires = {
+            'ray-x/guihua.lua',
+            run = 'cd lua/fzy && make'
+        },
+        config = function() require('config.navigator') end
+    }
+    
     -- Color scheme
     use { 'projekt0n/github-nvim-theme' }
 
@@ -34,7 +46,8 @@ return require('packer').startup({function()
         requires = {
             'nvim-treesitter/nvim-treesitter',
             run = ':TSUpdate'
-        }
+        },
+        config = function() require('config.go-nvim') end
     }
 
     -- Terraform support
